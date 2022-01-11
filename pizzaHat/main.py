@@ -7,7 +7,7 @@ def main():
     print("check:1 ")
     repo.create_tables()
     print("check:2 ")
-    input = open(sys.argv[1])#check
+    input = open(sys.argv[2])#check
     print("check:3 ")
     x = 0
     for line in input:
@@ -28,8 +28,8 @@ def main():
    
 
      
-    input = open(sys.argv[2])
-    output = open('summary.txt', 'w+')
+    input = open(sys.argv[3])
+    output = open(sys.argv[4], 'w+')
     i=1
     for line in input:
         line = line.rstrip()

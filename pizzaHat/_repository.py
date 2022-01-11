@@ -1,5 +1,6 @@
 import sqlite3
 import atexit
+import sys
 from hats import _hats
 from suppliers import _suppliers
 from orders import _orders
@@ -7,7 +8,7 @@ from orders import _orders
 
 class _repository:    
     def __init__(self):
-        self._conn = sqlite3.connect('example_input.db')
+        self._conn = sqlite3.connect(sys.argv[5])
         self.hats = _hats(self._conn)
         self.suppilers = _suppliers(self._conn)
         self.orders = _orders(self._conn)
